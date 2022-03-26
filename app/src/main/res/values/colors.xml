@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#0099ff</color>
+    <color name="colorPrimaryDark">#0099ff</color>
+    <color name="colorAccent">#2196F3</color>
+
+
+    <color name="color1">#FFF</color>
+    <color name="color2">#FDFDFD</color>
+    <color name="color3">#FFF</color>
+    <color name="color4">#FFF</color>
+
+
+    <color name="colorPrimaryLogin">#0099ff</color>
+    <color name="colorPrimaryDarkLogin">#0099ff</color>
+    <color name="colorAccentLogin">#D81B60</color>
+
+
+
+
+    <color name="colorDeepSkyBlue">#00A8FF</color>
+    <color name="colorSolitude">#DFE6E9</color>
+    <color name="colorWhiteSmoke">#F5F5F5</color>
+    <color name="colorBlackPearl">#1E272E</color>
+    <color name="colorRhino">#3B4350</color>
+    <color name="colorFreeSpeechBlue">#3C40C6</color>
+
+
+
+    //--------------- Color DASHWORD ------------------------//
+    <color name="DASHWORDPrimary">#0099ff</color>
+    <color name="DASHWORDPrimaryDark">#0099ff</color>
+    <color name="DASHWORDWhite">#ffffff</color>
+    <color name="DASHWORDdarkgray">#0099ff</color>
+    //--------------- Color DASHWORD ------------------------//
+
+
+    //--------------- Color Custom Dialog ------------------------//
+    <color name="DialogPrimary">#848cb7</color>
+    <color name="DialogPrimaryDark">#6d749f</color>
+    <color name="DialogRed">#ff3943</color>
+    <color name="DialogRedDark">#801b20</color>
+    <color name="DialogGreenLight">#abffc0</color>
+    <color name="DialogGreen">#247b37</color>
+    <color name="DialogGreen1">#3eb959</color>
+    <color name="DialogGreen2">#679170</color>
+    <color name="DialogWhite">#ffffff</color>
+    <color name="DialogAccent">#FF4081</color>
+    //--------------- Color Custom Dialog ------------------------//
+
+    <color name="DialogReda">#0099ff</color>
+    <color name="DialogReda2">#093552</color>
+    <color name="DialogPoup">#3B4350</color>
+    <color name="bac">#E0F0EE</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#D81B60</color>
+</resources>

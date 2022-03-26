@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:id="@+id/aa"
+    android:layout_marginRight="5dp"
+    android:gravity="center">
+
+
+
+    <ImageView
+        android:id="@+id/bt_box_yes_or_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_black_24dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="7dp"
+        android:elevation="5dp"
+        android:layout_alignParentRight="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/DialogGreen2"
+            android:id="@+id/CardViewAutoCustum"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+                        android:id="@+id/txtbox_yes_or_no1"
+                        android:textColor="@color/DialogWhite"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/box_image_yes_or_no"
+                        android:src="@drawable/check"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textColor="@color/DialogWhite"
+                        android:id="@+id/txtbox_yes_or_no2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="اسم العميل"
+                            android:id="@+id/namecustomer"
+                            android:textColorHint="@color/DialogWhite"
+                            android:layout_margin="20dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/phonecustomer"
+                            android:inputType="number"
+                            android:textColorHint="@color/DialogWhite"
+                            android:hint="رقم الهاتف"
+                            android:layout_margin="20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        >
+                        <Button
+                            android:id="@+id/btn_Ok"
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="20dp"
+                            android:layout_margin="5dp"
+                            android:text="@string/txtSave"
+                            android:textColor="@color/DialogWhite"
+                            android:background="@drawable/bg8"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <Button
+                            android:id="@+id/btn_box_yes_or_no_close"
+                            android:layout_width="0dp"
+                            android:layout_weight="50"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="20dp"
+                            android:text="@string/cancel"
+                            android:textColor="@color/DialogWhite"
+                            android:background="@drawable/bgaccount"
+                            android:layout_gravity="center_horizontal"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</RelativeLayout>

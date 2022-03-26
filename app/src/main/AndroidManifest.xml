@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.royalsoftapk">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logoroyal2"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logoroyal2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".frmProcessingordersMerge"></activity>
+        <activity android:name=".frmProcessingorders" />
+        <activity android:name=".HomeFeedBack" />
+        <activity android:name=".Connected_IP" />
+        <activity android:name=".CashVanPosDashBoard" />
+        <activity android:name=".frmSettingDeviceBltooth" />
+        <activity android:name=".frmIncommingChequesCashVan" />
+        <activity android:name=".frmIncomingCashVouchersCashVan" />
+        <activity android:name=".signaturepad" />
+        <activity
+            android:name=".frmCashVanPos"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".frmOrderHeaders"
+            android:screenOrientation="landscape" />
+        <activity android:name=".frmTablesHome" />
+        <activity android:name=".frmItemsNew" />
+        <activity android:name=".frmBondInventory" />
+        <activity android:name=".frmPrintBarcode" />
+        <activity android:name=".frmSelectItemQuantity" />
+        <activity android:name=".frmSelectPurchasePrice" />
+        <activity android:name=".frmItemsListIncomeVoucher" />
+        <activity android:name=".IncomeVoucherDetails" />
+        <activity android:name=".IncomeVoucherHeader" />
+        <activity android:name=".frm_Working_Hours" />
+        <activity android:name=".frmSendSMS" />
+        <activity android:name=".Cash_Count" />
+        <activity android:name=".incoming_voucher" />
+        <activity android:name=".frm_Emp_Online" />
+        <activity android:name=".frm_Cash_drow" />
+        <activity android:name=".MReport1" />
+        <activity android:name=".frm_OutgoingVoucher" />
+        <activity android:name=".List_offer_headers" />
+        <activity android:name=".frmCustody_staff" />
+        <activity android:name=".EnableCashDrawer" />
+        <activity
+            android:name=".Capture"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
+        <activity
+            android:name=".HomeDashword"
+            android:label="menu"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".DASHWORD"
+            android:label="menu"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Login"
+            android:label="POS"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".frmDailySalesDetails" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Maps"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

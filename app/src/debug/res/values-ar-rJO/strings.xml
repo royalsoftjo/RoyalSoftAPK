@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Send_Message">إرسال الرسالة</string>
+    <string name="hello_blank_fragment">مرحبا جزء فارغ</string>
+
+    <string name="Home">الرئيسية</string>
+    <string name="account">الحساب</string>
+    <string name="Contact">معلوماتنا</string>
+    <string name="Location">موقعنا</string>
+    <string name="Already">هل لديك حساب ؟</string>
+    <string name="Welcome">"أهلا بك سيد "</string>
+    <string name="Company_name">إسم المؤسسة</string>
+    <string name="Comapny_Phone">رقم الهاتف</string>
+    <string name="Cash_hand">النقدية بالصندوق</string>
+    <string name="Point_available">نقاط البيع المتاحة حاليا</string>
+    <string name="Sales">المبيعات</string>
+    <string name="Returns">المرتجعات</string>
+    <string name="Purchases">المشتريات</string>
+    <string name="Daily">اليومية</string>
+    <string name="monthly">الشهرية</string>
+    <string name="My_stats">إحصائياتي</string>
+    <string name="Total_f_sales">إجمالي مبيعات الصندوق</string>
+    <string name="No_Cash">رقم الصندوق</string>
+    <string name="Employee_Name">اسم الموظف</string>
+    <string name="date_session_opened">تاريخ فتح الجلسة</string>
+    <string name="Opening_balance">الرصيد الإفتتاحي</string>
+    <string name="number_invoice_sales">" عدد فواتير البيع"</string>
+    <string name="Total_sales">إجمالي المبيعات</string>
+    <string name="POS">نقاط البيع</string>
+    <string name="Inventory">إدارة المستودعات</string>
+    <string name="Accounting">المحاسبة</string>
+    <string name="Personnel">شؤون الموظفين</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="Payments_reports">تقارير المدفوعات</string>
+    <string name="Receipt_reports">تقارير المقبوضات</string>
+    <string name="Offers_reports">تقارير العروض</string>
+    <string name="Cash_count_reports">تقارير العد النقدي</string>
+    <string name="Staff_custody_reports">تقارير عهدة الموظفين</string>
+    <string name="Close_Cash">إغلاق الكاش</string>
+    <string name="Employee">الموظف</string>
+    <string name="point">النقطة :</string>
+    <string name="message">الرسالة</string>
+    <string name="text_message">نص الرسالة</string>
+    <string name="menu">القائمة</string>
+    <string name="Point_number">رقم النقطة</string>
+    <string name="amount_paid">المبلغ المدفوع</string>
+    <string name="description">الوصف</string>
+    <string name="Search">بحث</string>
+    <string name="Movement_time">وقت الحركة</string>
+    <string name="All_employees">جميع الموظفين</string>
+    <string name="All_POS">جميع نقاط البيع</string>
+    <string name="Offer_No">رقم العرض</string>
+    <string name="Offer_Name">اسم العرض</string>
+    <string name="From_Date">من تاريخ</string>
+    <string name="To_Date">إلى تاريخ</string>
+    <string name="Status">الحالة</string>
+    <string name="Work_day">يوم العمل</string>
+    <string name="Expected_balance">الرصيد المتوقع</string>
+    <string name="Actual_balance">الرصيد الفعلي</string>
+    <string name="difference">الفرق</string>
+    <string name="From">من</string>
+    <string name="to">إلى</string>
+    <string name="Product_Name">إسم الصنف</string>
+    <string name="Quantity">الكمية</string>
+    <string name="Update_Now">تحديث الان</string>
+    <string name="Update_Now_D">عزيزي العميل ، يتوفر إصدار جديد في المتجر ، الرجاء التحديث ...</string>
+    <string name="Sorry">عذرا لا يمكنك الدخول</string>
+    <string name="opened_soon">عذرا هذه الشاشة قيد التجهيز ، سيتم إفتتاحها قريبا</string>
+    <string name="cancel">إلغاء</string>
+    <string name="Mexit">هل أنت بالفعل تريد الخروج ؟</string>
+    <string name="no">لا</string>
+    <string name="yes">نعم</string>
+    <string name="sign_out2">تسجيل الخروج</string>
+    <string name="Report_Working_hours">تقرير أوقات الدوام</string>
+    <string name="Datee">التاريخ</string>
+    <string name="Time_entry">وقت الدخول</string>
+    <string name="Time_out">وقت الخروج</string>
+    <string name="Loading">جار التحميل</string>
+    <string name="TxtCashEnable">يرجى تحديد النقطة التي تريد إغلاق الكاش لديها .</string>
+    <string name="OpenCash">فتح الكاش</string>
+    <string name="MuPDA">PDA</string>
+    <string name="PrintBarcode">طباعة باركود</string>
+    <string name="MuTablet">تابلت</string>
+    <string name="Savethelist">حفظ القائمة</string>
+    <string name="MuSettings">إعدادات الجهاز</string>
+
+
+
+
+
+
+
+
+
+    <!-- connect -->
+    <string name="no_conn_address">地址：未连接</string>
+    <string name="no_conn_name">名称：未连接</string>
+    <string name="str_address">地址：</string>
+    <string name="str_name">名称：</string>
+    <string name="str_message">提示：</string>
+    <string name="str_connlast">是否连接到上次设备？</string>
+    <string name="str_resel">重新搜索</string>
+    <string name="str_wifi_now">当前连接的wifi是：</string>
+    <string name="str_wifi_no">尚未连接到任何wifi网络</string>
+
+
+    <string name="bt_not_enabled">蓝牙没有启动</string>
+    <string name="bt_has_on">蓝牙已打开</string>
+    <string name="bt_has_off">蓝牙已关闭</string>
+    <string name="bt_print_success">打印成功</string>
+    <string name="bt_print_failed">打印失败</string>
+    <string name="bt_connecting">正在连接..</string>
+    <string name="bt_connect_success">连接成功..</string>
+    <string name="bt_connect_failed">连接失败</string>
+    <string name="bt_connect_closed">连接已关闭</string>
+    <string name="title_connecting">正在连接...</string>
+    <string name="title_connected">已连接</string>
+    <string name="title_not_connected">未连接</string>
+
+
+    <string name="gotoSettings">اذهب للاعدادات</string>
+
+    <string name="button_back">返回</string>
+
+
+    <string name="str_show">演示：</string>
+    <string name="str_image">打印图片效果展示：</string>
+    <string name="str_text">打印文本效果展示：</string>
+    <string name="str_text_left">文字居左效果演示abc123：</string>
+    <string name="str_text_right">文字居右效果演示abc123：</string>
+    <string name="str_text_center">文字居中效果演示abc123：</string>
+    <string name="str_text_strong">文字加粗效果演示abc123：</string>
+    <string name="str_text_underline">文字下划线效果演示abc123：</string>
+    <string name="str_text_height">同行不同高效果演示：：</string>
+    <string name="times">倍</string>
+    <string name="bigger">放大</string>
+    <string name="bigger1">倍效果演示abc123</string>
+</resources>

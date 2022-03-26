@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frmCashVanPos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:id="@+id/mainlistcategory"
+            android:orientation="vertical"
+            android:background="@color/bac"
+            >
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:id="@+id/listcategoryCashVanPos"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginBottom="40dp"
+
+                >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/spinnerItem"
+                    >
+                </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:id="@+id/listitemswherecategoryCashVanPos"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/colorDeepSkyBlue"
+                android:weightSum="100">
+
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100"
+    android:orientation="horizontal">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:weightSum="100"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/Type_invoice"
+            android:textSize="12dp"
+            android:layout_weight="35"
+            android:textColor="@color/DialogWhite"
+            android:gravity="center"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/idCmbInvoiceTaxType"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="65" />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_weight="40"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/T_payment"
+            android:textSize="15dp"
+            android:layout_weight="30"
+            android:textColor="@color/DialogWhite"
+            android:gravity="center"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/idcmbInvoiceSettelmentWay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="70" />
+    </LinearLayout>
+
+</LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:layout_margin="5dp"
+                        android:layout_weight="60"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/txtBox"
+                            android:textSize="15dp"
+                            android:layout_weight="30"
+                            android:textColor="@color/DialogWhite"
+                            android:gravity="center"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/sp_Cash"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="70" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:layout_weight="40"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+
+
+
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/current_balance"
+                            android:textSize="15dp"
+                            android:layout_weight="30"
+                            android:textColor="@color/DialogWhite"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:text="0"
+                            android:id="@+id/totalBalance"
+                            android:textSize="15dp"
+                            android:layout_weight="70"
+                            android:textColor="@color/DialogWhite"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    >
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:layout_weight="50"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/txtSalesMan"
+                            android:textSize="15dp"
+                            android:layout_weight="35"
+                            android:textColor="@color/DialogWhite"
+                            android:gravity="center"/>
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/idcmbSalesman"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="65" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:layout_weight="50"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/txtCustomer"
+                            android:textSize="12dp"
+                            android:layout_weight="35"
+                            android:textColor="@color/DialogWhite"
+                            android:gravity="center"/>
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/idtxtCustomer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="50" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/plus_40px"
+                            android:id="@+id/addcustomer"
+                            android:layout_weight="15"
+                            />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="18"
+                android:layout_height="wrap_content"
+                android:background="@color/DialogReda2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="#"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:id="@+id/vItemName"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="6"
+                    android:text="@string/txtItemName"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:id="@+id/vBased_quantity"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:layout_weight="2"
+                    android:text="@string/txtBased_quantity"
+                    ></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="11dp"
+                    android:gravity="center"
+                    android:id="@+id/vnumber_baskets"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:text="@string/number_baskets"
+                    ></TextView>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:id="@+id/vType_panier"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:text="@string/Type_panier"
+                    ></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:id="@+id/vEmpty_quantity"
+                    android:visibility="gone"
+                    android:text="@string/Empty_quantity"
+                    ></TextView>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/vQty"
+                    android:layout_weight="3"
+                    android:text="@string/Quantity"></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:id="@+id/vPrice"
+                    android:textStyle="bold"
+                    android:layout_weight="4"
+                    android:text="@string/lsitPriceSales"></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/vTotal"
+                    android:layout_weight="3"
+                    android:text="@string/total"></TextView>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    ></TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.baoyz.swipemenulistview.SwipeMenuListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:id="@+id/listCashVanPos">
+
+                </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/DialogReda2"
+        android:layout_alignParentBottom="true"
+        android:weightSum="100">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:background="@color/DialogRedDark"
+            android:id="@+id/btnSaveOrder"
+            android:textColor="@color/DialogWhite"
+            android:text="@string/SaveOrder"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/total"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0.000"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:id="@+id/txtTotalCashVan"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0.000"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:id="@+id/txtTotalQty"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0.000"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:id="@+id/txtTotalBeforeTax"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0.000"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:id="@+id/txtTotalTaxAmount"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:src="@drawable/tt2"
+            android:gravity="center"
+            android:id="@+id/btn_signaturepad"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:src="@drawable/task"
+            android:gravity="center"
+            android:id="@+id/btnNotes"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:src="@drawable/menu"
+            android:gravity="center"
+            android:id="@+id/btnmenu"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

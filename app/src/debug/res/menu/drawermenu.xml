@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/db1" android:title="@string/Home" android:icon="@drawable/ic_home_black_24dp"/>
+    <item android:id="@+id/db2" android:title="@string/POS" android:icon="@drawable/ic_desktop_windows_black_24dp"/>
+    <item android:id="@+id/db3" android:title="@string/Inventory" android:icon="@drawable/ic_store_black_24dp"/>
+    <item android:id="@+id/db4" android:title="@string/Accounting" android:icon="@drawable/ic_account_balance_black_24dp"/>
+    <item android:id="@+id/db5" android:title="@string/Personnel" android:icon="@drawable/ic_accessibility_black_24dp"/>
+    <item android:id="@+id/db7" android:title="@string/MuPDA" android:icon="@drawable/ic_tap_and_play_black_24dp"/>
+    <item android:id="@+id/db8" android:title="@string/MuTablet" android:icon="@drawable/ic_tablet_android_black_24dp"/>
+    <item android:id="@+id/db9" android:title="@string/MuSettings" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item android:id="@+id/db10" android:title="@string/txtData_migration" android:icon="@drawable/ic_backup_black_24dp"/>
+    <item android:id="@+id/db11" android:title="@string/txtRefresh_data" android:icon="@drawable/ic_cloud_download_black_24dp"/>
+    <item android:id="@+id/db6" android:title="@string/sign_out" android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+
+</menu>

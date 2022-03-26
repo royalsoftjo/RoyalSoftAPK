@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PDAHome">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:scrollIndicators="right">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/hover_bt_sms"
+        android:text="@string/txtNewIncomeVoucher"
+        android:textColor="#FFF"
+
+        android:id="@+id/bt_IncomeVoucher"
+        android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/hover_bt_cashopen2"
+            android:text="@string/new_purchase_order"
+            android:textColor="#FFF"
+            android:id="@+id/bt_purchaseOrder"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btninventory"
+            android:text="@string/txtBondInventory"
+            android:textColor="#FFF"
+
+            android:id="@+id/bt_BondInventory"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_PurchasePrice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/hover_bt_cashopen"
+            android:text="@string/txtPurchasePrice"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+
+             />
+
+        <Button
+            android:id="@+id/bt_Itemquantity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/hover_bt_cashopen3"
+            android:text="@string/Itemquantity"
+            android:textColor="#FFF"
+            android:textStyle="bold" />
+
+        <Button
+
+            android:id="@+id/bt_PrintBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/hover_bt_cashopen3"
+            android:text="@string/PrintBarcode"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+
+            />
+
+        <Button
+            android:id="@+id/bt_itemsNew"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/newitem"
+            android:text="@string/txtNewItem"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+</ScrollView>

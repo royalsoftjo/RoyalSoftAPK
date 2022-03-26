@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/BranchAName"
+                android:textSize="13dp"
+                android:gravity="center"
+
+                android:layout_weight="1"
+                android:text="الفرع"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/WorkDayDate"
+                android:gravity="center"
+                android:text="يوم العمل"
+
+                android:textSize="12dp"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/NetSalesInvoiceAmount"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="#0099ff"
+                android:layout_weight="1"
+                android:text="إجمالي المبيعات"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount16"
+                android:textSize="13dp"
+                android:gravity="center"
+
+
+                android:layout_weight="1"
+                android:text="16%"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount10"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="10%"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount8"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="8%"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount5"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="5%"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount4"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="4%"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/TaxAmount0"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="0%"></TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

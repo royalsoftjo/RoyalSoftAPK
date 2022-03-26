@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IncomeVoucherDetails">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/hover_bt_cashopen"
+        android:text="@string/Entered_items"
+        android:textColor="#FFF"
+        android:id="@+id/bt_EnterItems"
+        android:textStyle="bold" />
+
+
+
+<ImageButton
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:textAlignment="center"
+    android:background="@drawable/hover_bt_cashopen3"
+    android:layout_marginTop="80dp"
+    android:layout_marginLeft="20dp"
+    android:textColor="#FFF"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:src="@drawable/ic_linked_camera_black_24dp"
+    android:id="@+id/btnCamera"
+    />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/Search"
+                android:textAlignment="gravity"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/sp_ItemName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Barcdoe"
+            android:id="@+id/textBarcode"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:weightSum="2"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/enditems"
+        android:text="@string/SaveOrder"
+        android:layout_weight="1"
+        android:textColor="#FFF"
+        android:id="@+id/bt_SaveOrder"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cancelorder"
+        android:text="@string/Cancelorder"
+        android:layout_weight="1"
+        android:textColor="#FFF"
+        android:id="@+id/bt_cancelOrder"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
+
+
+</RelativeLayout>

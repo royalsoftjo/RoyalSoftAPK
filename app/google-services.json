@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125900186212",
+    "firebase_url": "https://royalsoftapk.firebaseio.com",
+    "project_id": "royalsoftapk",
+    "storage_bucket": "royalsoftapk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125900186212:android:97e55fecdd2402bf20f571",
+        "android_client_info": {
+          "package_name": "com.example.royalsoftapk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125900186212-068psrafkln3euloul82aon2lhtcsqkr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.royalsoftapk",
+            "certificate_hash": "c62144cf0401999551fc46c83e355f55d7e1e3a8"
+          }
+        },
+        {
+          "client_id": "125900186212-r551ighmpch6hg466p5uutrrcidm8avs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgOT9fC5GEweaj2MIx71f_kTHyQnteHaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125900186212-r551ighmpch6hg466p5uutrrcidm8avs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

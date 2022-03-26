@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frmOrderHeaders">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:weightSum="100"
+        android:id="@+id/mainlistcategory"
+        android:orientation="vertical"
+        android:background="@color/bac"
+        >
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:id="@+id/listcategory"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dp"
+            android:layout_weight="79"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listitemswherecategory"
+                android:layout_marginBottom="65dp"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:weightSum="100"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:background="@color/colorDeepSkyBlue"
+            android:weightSum="100">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" رقم الطلب "
+                android:textSize="15dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textSize="15dp"
+                android:id="@+id/idOrder"
+                android:layout_margin="5dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+
+
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="رقم الطاولة "
+                android:textSize="15dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textSize="15dp"
+                android:id="@+id/nameTable"
+                android:layout_margin="5dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textSize="15dp"
+                android:id="@+id/idTable"
+                android:layout_margin="5dp"
+                android:textColor="@color/colorDeepSkyBlue"
+                android:gravity="center"/>
+
+
+
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="الصالة "
+                android:textSize="15dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textSize="15dp"
+                android:id="@+id/NameSecation"
+                android:layout_margin="5dp"
+                android:textColor="@color/DialogWhite"
+                android:gravity="center"/>
+
+
+            <!--ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:focusable="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_description_black_24dp"
+                android:id="@+id/previousInvoiceSales"/!-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            android:layout_weight="6"
+            android:layout_height="0dp"
+            android:background="@color/DialogReda2"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="#"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="3"
+                android:text="المادة"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="@string/lsitPriceSales"
+                ></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="@string/Quantity"></TextView>
+
+
+
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="2"
+                android:text="@string/total"></TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                ></TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="75">
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listOrderSales">
+
+            </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/DialogReda2"
+        android:layout_alignParentBottom="true"
+        android:weightSum="100">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@color/DialogRedDark"
+            android:id="@+id/btnSaveOrder"
+            android:textColor="@color/DialogWhite"
+            android:text="@string/SaveOrder"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/total"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="0.000"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:id="@+id/txtTotalOrderSales"
+            android:textStyle="bold"
+            android:textColor="@color/DialogWhite"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</RelativeLayout>

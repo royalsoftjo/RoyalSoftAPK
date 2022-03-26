@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Employee_Name"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:text="اسم الموظف"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:id="@+id/FingerPrintDate"
+                android:gravity="center"
+                android:text="التاريخ"
+                android:textSize="13dp"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/CheckInTime"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:textColor="@color/DialogGreen"
+                android:text="وقت الدخول"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/CheckOutTime"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:textColor="@color/DialogRedDark"
+                android:text="وقت الخروج"></TextView>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
