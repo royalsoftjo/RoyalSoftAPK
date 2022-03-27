@@ -65,10 +65,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:weightSum="12"
+                android:weightSum="15"
                 android:background="@color/DialogGreen"
                 android:layout_height="match_parent"
                 >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="تحديد"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:text="الرقم"></TextView>
 
                 <TextView
                     android:layout_width="0dp"
@@ -123,7 +143,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:textColor="#fff"
-                    android:textSize="15dp"
+                    android:textSize="13dp"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:layout_weight="1"

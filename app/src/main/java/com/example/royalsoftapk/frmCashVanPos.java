@@ -169,10 +169,12 @@ public class frmCashVanPos extends AppCompatActivity  implements EasyPermission.
         if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN){
            Toast.makeText(frmCashVanPos.this,"Dawnn",Toast.LENGTH_SHORT).show();
             spinnerInvoiceTaxTypeID=2;
+            GetdataCategory();
         }
         if (keyCode == KeyEvent.KEYCODE_VOLUME_UP){
             Toast.makeText(frmCashVanPos.this,"UPPP",Toast.LENGTH_SHORT).show();
             spinnerInvoiceTaxTypeID=1;
+            GetdataCategory();
         }
         return true;
     }
@@ -616,7 +618,7 @@ public class frmCashVanPos extends AppCompatActivity  implements EasyPermission.
 
                                 }
                             }
-                            GetdataCategory();
+
                             selecttotalBalanceByCustomerID();
                         }
                     }

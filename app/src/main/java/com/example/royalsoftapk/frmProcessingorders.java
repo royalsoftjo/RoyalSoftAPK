@@ -58,14 +58,14 @@ public class frmProcessingorders extends AppCompatActivity {
         String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         textdate.setText(currentDate);
         getdata(conRoyal.IDUser);
-        bt_Search_USER=findViewById(R.id.bt_Search_USER);
-
-        bt_Search_USER.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getdata(conRoyal.IDUser);
-            }
-        });
+//        bt_Search_USER=findViewById(R.id.bt_Search_USER);
+//
+//        bt_Search_USER.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                getdata(conRoyal.IDUser);
+//            }
+//        });
 
 
 
@@ -108,15 +108,19 @@ public class frmProcessingorders extends AppCompatActivity {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject obj = response.getJSONObject(i);
                                     Cls_Virable_Processingorders a=new Cls_Virable_Processingorders();
-                                    int MainItemID = obj.getInt("MainItemID");
-                                    int ID = obj.getInt("ID");
-                                    String MainItemAName = obj.getString("MainItemAName");
-                                    int SubItemID = obj.getInt("SubItemID");
-                                    String SubItemAName = obj.getString("SubItemAName");
+                                    int MainItemID = obj.optInt("MainItemID",0);
+                                    int ID = obj.optInt("ID",0);
+                                    String MainItemAName = obj.optString("MainItemAName","");
+                                    int SubItemID = obj.optInt("SubItemID",0);
+                                    String SubItemAName = obj.optString("SubItemAName","");
                                     int ItemState = obj.optInt("ItemState",2);
-                                    String DeliveryDate = obj.getString("DeliveryDate");
-                                    int CustomerID = obj.getInt("CustomerID");
-                                    String CustomerAName = obj.getString("CustomerAName");
+                                    String DeliveryDate = obj.optString("DeliveryDate","");
+                                    int CustomerID = obj.optInt("CustomerID",0);
+                                    int StartNumber = obj.optInt("StartNumber",0);
+
+                                    String CustomerAName = obj.optString("CustomerAName","");
+
+                                    int Property = obj.optInt("Property",0);
 
                                     a.setID(ID);
                                     a.setItemID(MainItemID);
@@ -124,22 +128,24 @@ public class frmProcessingorders extends AppCompatActivity {
                                     a.setItemSubID(SubItemID);
                                     a.setItemSubAName(SubItemAName);
                                     a.setState(ItemState);
-                                    a.setDate(DeliveryDate);
+                                    a.setDate(DeliveryDate.substring(0,10));
                                     a.setCustomerID(CustomerID);
                                     a.setCustomerName(CustomerAName);
+                                    a.setProperty(Property);
+                                    a.setStartNumber(StartNumber);
 
                                     alist.add(a);
                                 }
                                 Adapter = new Adapter_Processingorders(frmProcessingorders.this, alist);
                                 listView.setAdapter(Adapter);
                             } catch (JSONException e) {
-                                e.printStackTrace();
+                                Toast.makeText(frmProcessingorders.this,e.getMessage(),Toast.LENGTH_LONG).show();
                             }
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    error.printStackTrace();
+                    Toast.makeText(frmProcessingorders.this,error.getMessage(),Toast.LENGTH_LONG).show();
                 }
             });
             mQueue.add(request);

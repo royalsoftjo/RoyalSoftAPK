@@ -10,6 +10,10 @@ public class Cls_Virable_Processingorders {
     int CustomerID;
     String Date;
     int State;
+    int Property;
+    boolean IsChecked;
+    int StartNumber;
+
 
     public int getID() {
         return ID;
@@ -81,5 +85,29 @@ public class Cls_Virable_Processingorders {
 
     public void setState(int state) {
         State = state;
+    }
+
+    public int getProperty() {
+        return Property;
+    }
+
+    public void setProperty(int property) {
+        Property = property;
+    }
+
+    public boolean isChecked() {
+        return IsChecked;
+    }
+
+    public int getStartNumber() {
+        return StartNumber;
+    }
+
+    public void setStartNumber(int startNumber) {
+        StartNumber = startNumber;
+    }
+
+    public void setChecked(boolean checked) {
+        IsChecked = checked;
     }
 }

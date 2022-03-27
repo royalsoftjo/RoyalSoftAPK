@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -65,6 +66,22 @@ public class Adapter_Processingorders extends BaseAdapter {
         }
 
         //----------------------------------------------------------------------------
+
+        final CheckBox chkItem = (CheckBox) view.findViewById(R.id.chkItem);
+        //chkItem.setText(cls_virable_Processingorders.getItemAName());
+        chkItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean chk=chkItem.isChecked();
+                cls_virable_Processingorders.setChecked(chk);
+            }
+        });
+
+        TextView StartNumber = (TextView) view.findViewById(R.id.sStartNumber);
+        StartNumber.setText(String.valueOf(cls_virable_Processingorders.getStartNumber()));
+
+
+
         TextView ItemAName = (TextView) view.findViewById(R.id.ItemAName);
         ItemAName.setText(cls_virable_Processingorders.getItemAName());
 
@@ -95,91 +112,298 @@ public class Adapter_Processingorders extends BaseAdapter {
 
                 final int ID = cls_virable_Processingorders.getID();
                 if(cls_virable_Processingorders.getState()==2) {
-                    //----------------------------- Dailog ItemName_New--------------------------------------------------------
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    builder.setTitle("إدخال الكمية العرض ");
-                    builder.setIcon(R.drawable.sms);
-                    builder.setMessage(" يرجى إدخال الكمية  العرض   ");
-
-                    inputEditQty = new EditText(context);
-
-                        inputEditQty.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-
-                    builder.setView(inputEditQty);
-                    builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Qtywidth = inputEditQty.getText().toString();
-                            if (Qtywidth.equals(""))
-                            {
-                                Toast.makeText(context, "يرجى إدخال الكمية العرض", Toast.LENGTH_LONG).show();
-                                return;
-                            } else {
 
 
-
-
-
-
-
-
-
-
-                                //----------------------------- Dailog ItemName_New--------------------------------------------------------
-                                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                                builder.setTitle("إدخال الكمية الطول ");
-                                builder.setIcon(R.drawable.sms);
-                                builder.setMessage(" يرجى إدخال الكمية  الطول   ");
-
-                                inputEditQtylength = new EditText(context);
-
-                                inputEditQtylength.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
-
-                                builder.setView(inputEditQtylength);
-                                builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Qtylength = inputEditQtylength.getText().toString();
-                                        if (Qtylength.equals(""))
-                                        {
-                                            Toast.makeText(context, "يرجى إدخال الكمية الطول", Toast.LENGTH_LONG).show();
-                                            return;
-                                        } else {
-                                            Savedata(context,ID,Double.valueOf(Qtywidth),Double.valueOf(Qtylength));
-                                        }
-                                    }
-                                });
-                                builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-                                    }
-                                });
-
-                                final AlertDialog add = builder.create();
-                                add.show();
-                                //--------------------------------------Button Dailog----------------------------------------------
-
-
-
-
-
-
-
-
-                            }
+                    boolean cc=false;
+                    for(int i=0;i<alist_Processingorders.size();i++)
+                    {
+                        if(alist_Processingorders.get(i).isChecked())
+                        {
+                            cc=true;
+                            break;
                         }
-                    });
-                    builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
+                    }
 
-                    final AlertDialog add = builder.create();
-                    add.show();
-                    //--------------------------------------Button Dailog----------------------------------------------
+                    if(cc) {
+                        if (cls_virable_Processingorders.getProperty() == 1)  // QTY
+                        {
+                            //----------------------------- Dailog ItemName_New--------------------------------------------------------
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("إدخال الكمية  ");
+                            builder.setIcon(R.drawable.sms);
+                            builder.setMessage(" يرجى إدخال الكمية     ");
+
+                            inputEditQty = new EditText(context);
+
+                            inputEditQty.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                            builder.setView(inputEditQty);
+                            builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Qtywidth = inputEditQty.getText().toString();
+                                    if (Qtywidth.equals("")) {
+                                        Toast.makeText(context, "يرجى إدخال الكمية ", Toast.LENGTH_LONG).show();
+                                        return;
+                                    } else {
+                                        saveall(context, ID, Double.valueOf(Qtywidth), Double.valueOf(0));
+                                    }
+                                }
+                            });
+                            builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                            final AlertDialog add = builder.create();
+                            add.show();
+                            //--------------------------------------Button Dailog----------------------------------------------
+
+                        }
+                        if (cls_virable_Processingorders.getProperty() == 2)  // Two
+                        {
+                            //----------------------------- Dailog ItemName_New--------------------------------------------------------
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("إدخال الكمية العرض ");
+                            builder.setIcon(R.drawable.sms);
+                            builder.setMessage(" يرجى إدخال الكمية  العرض   ");
+
+                            inputEditQty = new EditText(context);
+
+                            inputEditQty.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                            builder.setView(inputEditQty);
+                            builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Qtywidth = inputEditQty.getText().toString();
+                                    if (Qtywidth.equals("")) {
+                                        Toast.makeText(context, "يرجى إدخال الكمية العرض", Toast.LENGTH_LONG).show();
+                                        return;
+                                    } else {
+
+
+                                        //----------------------------- Dailog ItemName_New--------------------------------------------------------
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                                        builder.setTitle("إدخال الكمية الطول ");
+                                        builder.setIcon(R.drawable.sms);
+                                        builder.setMessage(" يرجى إدخال الكمية  الطول   ");
+
+                                        inputEditQtylength = new EditText(context);
+
+                                        inputEditQtylength.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                                        builder.setView(inputEditQtylength);
+                                        builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Qtylength = inputEditQtylength.getText().toString();
+                                                if (Qtylength.equals("")) {
+                                                    Toast.makeText(context, "يرجى إدخال الكمية الطول", Toast.LENGTH_LONG).show();
+                                                    return;
+                                                } else {
+                                                    saveall(context, ID, Double.valueOf(Qtywidth), Double.valueOf(Qtylength));
+                                                }
+                                            }
+                                        });
+                                        builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dialog.dismiss();
+                                            }
+                                        });
+
+                                        final AlertDialog add = builder.create();
+                                        add.show();
+                                        //--------------------------------------Button Dailog----------------------------------------------
+
+
+                                    }
+                                }
+                            });
+                            builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                            final AlertDialog add = builder.create();
+                            add.show();
+                            //--------------------------------------Button Dailog----------------------------------------------
+                        }
+                        if (cls_virable_Processingorders.getProperty() == 3)  // Height
+                        {
+
+                            //----------------------------- Dailog ItemName_New--------------------------------------------------------
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("إدخال الكمية الطول ");
+                            builder.setIcon(R.drawable.sms);
+                            builder.setMessage(" يرجى إدخال الكمية  الطول   ");
+
+                            inputEditQtylength = new EditText(context);
+
+                            inputEditQtylength.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                            builder.setView(inputEditQtylength);
+                            builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Qtylength = inputEditQtylength.getText().toString();
+                                    if (Qtylength.equals("")) {
+                                        Toast.makeText(context, "يرجى إدخال الكمية الطول", Toast.LENGTH_LONG).show();
+                                        return;
+                                    } else {
+                                        saveall(context, ID, Double.valueOf(0), Double.valueOf(Qtylength));
+                                    }
+                                }
+                            });
+                            builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                            final AlertDialog add = builder.create();
+                            add.show();
+                            //--------------------------------------Button Dailog----------------------------------------------
+                        }
+                        if (cls_virable_Processingorders.getProperty() == 4)  // Width
+                        {
+                            //----------------------------- Dailog ItemName_New--------------------------------------------------------
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("إدخال الكمية العرض ");
+                            builder.setIcon(R.drawable.sms);
+                            builder.setMessage(" يرجى إدخال الكمية العرض    ");
+
+                            inputEditQty = new EditText(context);
+
+                            inputEditQty.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+
+                            builder.setView(inputEditQty);
+                            builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Qtywidth = inputEditQty.getText().toString();
+                                    if (Qtywidth.equals("")) {
+                                        Toast.makeText(context, "يرجى إدخال الكمية العرض", Toast.LENGTH_LONG).show();
+                                        return;
+                                    } else {
+                                        saveall(context, ID, Double.valueOf(Qtywidth), Double.valueOf(0));
+                                    }
+                                }
+                            });
+                            builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+
+                            final AlertDialog add = builder.create();
+                            add.show();
+                            //--------------------------------------Button Dailog----------------------------------------------
+                        }
+                        if (cls_virable_Processingorders.getProperty() == 0)  // else
+                        {
+                            Toast.makeText(context, "المادة ليس لها خاصية طول و عرض و كمية", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+
+                    }
+                    else
+                    {
+                        Toast.makeText(context, "يرجى تحديد مادة واحدة على الأقل", Toast.LENGTH_LONG).show();
+                    }
+
+//                    //----------------------------- Dailog ItemName_New--------------------------------------------------------
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//                    builder.setTitle("إدخال الكمية العرض ");
+//                    builder.setIcon(R.drawable.sms);
+//                    builder.setMessage(" يرجى إدخال الكمية  العرض   ");
+//
+//                    inputEditQty = new EditText(context);
+//
+//                        inputEditQty.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+//
+//                    builder.setView(inputEditQty);
+//                    builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            Qtywidth = inputEditQty.getText().toString();
+//                            if (Qtywidth.equals(""))
+//                            {
+//                                Toast.makeText(context, "يرجى إدخال الكمية العرض", Toast.LENGTH_LONG).show();
+//                                return;
+//                            } else {
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//                                //----------------------------- Dailog ItemName_New--------------------------------------------------------
+//                                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//                                builder.setTitle("إدخال الكمية الطول ");
+//                                builder.setIcon(R.drawable.sms);
+//                                builder.setMessage(" يرجى إدخال الكمية  الطول   ");
+//
+//                                inputEditQtylength = new EditText(context);
+//
+//                                inputEditQtylength.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+//
+//                                builder.setView(inputEditQtylength);
+//                                builder.setPositiveButton("حفظ", new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialog, int which) {
+//                                        Qtylength = inputEditQtylength.getText().toString();
+//                                        if (Qtylength.equals(""))
+//                                        {
+//                                            Toast.makeText(context, "يرجى إدخال الكمية الطول", Toast.LENGTH_LONG).show();
+//                                            return;
+//                                        } else {
+//                                            Savedata(context,ID,Double.valueOf(Qtywidth),Double.valueOf(Qtylength));
+//                                        }
+//                                    }
+//                                });
+//                                builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialog, int which) {
+//                                        dialog.dismiss();
+//                                    }
+//                                });
+//
+//                                final AlertDialog add = builder.create();
+//                                add.show();
+//                                //--------------------------------------Button Dailog----------------------------------------------
+//
+//
+//
+//
+//
+//
+//
+//
+//                            }
+//                        }
+//                    });
+//                    builder.setNegativeButton("إلغاء", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.dismiss();
+//                        }
+//                    });
+//
+//                    final AlertDialog add = builder.create();
+//                    add.show();
+//                    //--------------------------------------Button Dailog----------------------------------------------
                 }
             }
         });
@@ -190,6 +414,26 @@ public class Adapter_Processingorders extends BaseAdapter {
         return view;
     }
 
+    private void saveall(Context c, int ID, Double width, Double length){
+        try
+        {
+            for(int i=0;i<alist_Processingorders.size();i++)
+            {
+                if(alist_Processingorders.get(i).isChecked())
+                {
+                    Savedata(context,alist_Processingorders.get(i).getID(),Double.valueOf(width),Double.valueOf(length));
+                }
+            }
+            Qtywidth="0";
+            Qtylength="0";
+            Intent intent=new Intent(context,frmProcessingorders.class);
+            context.startActivity(intent);
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
     private void Savedata(Context c, int ID, Double width, Double length) {
         try {
              RequestQueue mQueue;
@@ -200,8 +444,7 @@ public class Adapter_Processingorders extends BaseAdapter {
                         @Override
                         public void onResponse(JSONArray response) {
 
-                            Intent intent=new Intent(context,frmProcessingorders.class);
-                            context.startActivity(intent);
+
                             //for (int i = 0; i < response.length(); i++) {
                             // JSONObject obj = response.getJSONObject(i);
 

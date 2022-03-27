@@ -109,7 +109,7 @@ public class AccLogin extends Fragment {
         Btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Global.GetLocation(getActivity(),getContext());
+                //Global.GetLocation(getActivity(),getContext());
                String User = textUser.getText().toString();
                String Pass = textPass.getText().toString();
                 CheckIP();
